@@ -5,7 +5,7 @@ import { SocialProof } from "@/components/sections/SocialProof";
 import { Features } from "@/components/sections/Features";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Benefits } from "@/components/sections/Benefits";
-import { VideoDemo } from "@/components/sections/VideoDemo";
+import { InteractiveDemo } from "@/components/sections/InteractiveDemo";
 import { Pricing } from "@/components/sections/Pricing";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -20,7 +20,7 @@ export default function Home() {
         <Features />
         <HowItWorks />
         <Benefits />
-        <VideoDemo />
+        <InteractiveDemo />
         <Pricing />
         <FAQ />
         <FinalCTA />
