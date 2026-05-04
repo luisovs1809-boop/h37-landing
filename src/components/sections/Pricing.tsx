@@ -120,13 +120,6 @@ export function Pricing() {
                 </a>
               </div>
 
-              {/* Garantía */}
-              <div className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-success/10 border border-success/20 px-4 py-3">
-                <Shield size={16} className="text-success flex-shrink-0" strokeWidth={2.5} />
-                <span className="text-[13px] font-semibold text-success">
-                  {PRICING.guarantee}
-                </span>
-              </div>
 
               {/* Trust line */}
               <div className="mt-8 pt-6 border-t border-line-soft flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[12px] text-muted">

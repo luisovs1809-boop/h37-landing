@@ -7,6 +7,8 @@ import { Features } from "@/components/sections/Features";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Benefits } from "@/components/sections/Benefits";
 import { InteractiveDemo } from "@/components/sections/InteractiveDemo";
+import { Migration } from "@/components/sections/Migration";
+import { Comparison } from "@/components/sections/Comparison";
 import { Pricing } from "@/components/sections/Pricing";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -23,6 +25,8 @@ export default function Home() {
         <HowItWorks />
         <Benefits />
         <InteractiveDemo />
+        <Migration />
+        <Comparison />
         <Pricing />
         <FAQ />
         <FinalCTA />

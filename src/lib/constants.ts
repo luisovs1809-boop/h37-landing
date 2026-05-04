@@ -31,7 +31,6 @@ export const PRICING = {
   currency: "MXN",
   display: "$5,999",
   type: "Pago único",
-  guarantee: "Garantía de 30 días o te regresamos tu dinero",
   includes: [
     "Licencia de por vida",
     "Actualizaciones de por vida",
@@ -46,8 +45,8 @@ export const PRICING = {
 
 export const NAV_LINKS = [
   { href: "#funciones", label: "Funciones" },
-  { href: "#como-funciona", label: "Cómo funciona" },
   { href: "#demo", label: "Demo" },
+  { href: "#comparar", label: "Comparar" },
   { href: "#precio", label: "Precio" },
   { href: "#preguntas", label: "Preguntas" },
 ] as const;

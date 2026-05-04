@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { LayoutDashboard, Smartphone, Sparkles } from "lucide-react";
+import { LayoutDashboard, Smartphone, Sparkles, Wallet } from "lucide-react";
 import { DemoPanel } from "@/components/demo/DemoPanel";
 import { DemoBooking } from "@/components/demo/DemoBooking";
+import { DemoCheckout } from "@/components/demo/DemoCheckout";
 
-type Tab = "panel" | "booking";
+type Tab = "panel" | "booking" | "checkout";
 
 export function InteractiveDemo() {
   const [tab, setTab] = useState<Tab>("panel");
@@ -59,14 +60,18 @@ export function InteractiveDemo() {
           transition={{ duration: 0.5, delay: 0.18 }}
           className="mt-10 flex justify-center"
         >
-          <div className="inline-flex items-center gap-1 rounded-full bg-white border border-line p-1 shadow-card">
+          <div className="inline-flex items-center gap-1 rounded-full bg-white border border-line p-1 shadow-card overflow-x-auto max-w-full">
             <TabButton active={tab === "panel"} onClick={() => setTab("panel")}>
               <LayoutDashboard size={15} />
-              Panel del barbero
+              <span className="hidden sm:inline">Panel del</span> Barbero
             </TabButton>
             <TabButton active={tab === "booking"} onClick={() => setTab("booking")}>
               <Smartphone size={15} />
-              Reserva del cliente
+              <span className="hidden sm:inline">Reserva del</span> Cliente
+            </TabButton>
+            <TabButton active={tab === "checkout"} onClick={() => setTab("checkout")}>
+              <Wallet size={15} />
+              Cobro
             </TabButton>
           </div>
         </motion.div>
@@ -82,13 +87,19 @@ export function InteractiveDemo() {
           {/* Soft glow under demo */}
           <div className="absolute -inset-x-8 -top-8 -bottom-12 -z-10 rounded-[3rem] bg-gradient-to-b from-blue/5 to-transparent blur-3xl" />
 
-          {tab === "panel" ? (
+          {tab === "panel" && (
             <div className="max-w-4xl mx-auto">
               <DemoPanel />
             </div>
-          ) : (
+          )}
+          {tab === "booking" && (
             <div className="max-w-xl mx-auto">
               <DemoBooking />
+            </div>
+          )}
+          {tab === "checkout" && (
+            <div className="max-w-3xl mx-auto">
+              <DemoCheckout />
             </div>
           )}
         </motion.div>
