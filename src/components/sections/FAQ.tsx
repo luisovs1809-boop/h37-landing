@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Plus } from "lucide-react";
+import { SITE } from "@/lib/constants";
 
 const faqs = [
   {
@@ -130,12 +131,12 @@ export function FAQ() {
           <p className="text-[15px] text-ink-soft">
             ¿Tienes otra duda?{" "}
             <a
-              href="https://wa.me/524420000000"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={SITE.contactUrl}
+              target={SITE.hasWhatsApp ? "_blank" : undefined}
+              rel={SITE.hasWhatsApp ? "noopener noreferrer" : undefined}
               className="text-blue font-semibold hover:underline"
             >
-              Pregúntanos por WhatsApp →
+              {SITE.hasWhatsApp ? "Pregúntanos por WhatsApp →" : "Escríbenos por correo →"}
             </a>
           </p>
         </motion.div>

@@ -1,5 +1,6 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { StructuredData } from "@/components/StructuredData";
 import { Hero } from "@/components/sections/Hero";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { Features } from "@/components/sections/Features";
@@ -13,6 +14,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export default function Home() {
   return (
     <>
+      <StructuredData />
       <Header />
       <main className="flex-1">
         <Hero />

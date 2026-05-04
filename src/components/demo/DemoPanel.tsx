@@ -104,8 +104,9 @@ export function DemoPanel() {
           </div>
         </div>
 
-        {/* Calendar grid */}
-        <div className="grid grid-cols-[44px_repeat(3,1fr)] text-[10px] sm:text-[11px] bg-white">
+        {/* Calendar grid (con scroll horizontal en mobile para que las 3 columnas no se aprieten) */}
+        <div className="overflow-x-auto bg-white">
+        <div className="grid grid-cols-[44px_repeat(3,minmax(110px,1fr))] sm:grid-cols-[44px_repeat(3,1fr)] text-[10px] sm:text-[11px] min-w-full">
           {/* Header row: barbers */}
           <div className="bg-platinum-2 border-b border-r border-line h-10" />
           {DEMO_BARBERS.map((b) => (
@@ -200,13 +201,14 @@ export function DemoPanel() {
             </div>
           ))}
         </div>
+        </div>
 
         {/* Bottom hint */}
         <div className="px-5 py-2.5 bg-platinum-2 border-t border-line text-center">
           <div className="text-[11px] text-muted">
-            <span className="hidden sm:inline">💡 </span>
             <span className="font-semibold text-ink-soft">Toca una cita</span> para ver detalles, o
             un <span className="font-semibold text-ink-soft">slot vacío</span> para crear una nueva
+            <span className="sm:hidden block mt-1 text-muted">← desliza para ver más barberos →</span>
           </div>
         </div>
       </div>

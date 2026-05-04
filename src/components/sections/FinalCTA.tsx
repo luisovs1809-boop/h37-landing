@@ -78,18 +78,16 @@ export function FinalCTA() {
               className="mt-9 flex flex-col sm:flex-row gap-3 justify-center items-center"
             >
               <a
-                href={SITE.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={SITE.contactUrl}
+                target={SITE.hasWhatsApp ? "_blank" : undefined}
+                rel={SITE.hasWhatsApp ? "noopener noreferrer" : undefined}
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-white text-blue text-[16px] font-semibold px-7 py-4 shadow-card-lg hover:shadow-card transition-all duration-200"
               >
-                Comprar ahora
+                {SITE.contactCtaLabel}
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-0.5" />
               </a>
               <a
-                href={SITE.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:${SITE.email}?subject=Quiero%20agendar%20una%20llamada%20de%20Agendas%20H37`}
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[16px] font-semibold px-7 py-4 hover:bg-white/15 transition-all duration-200"
               >
                 <MessageCircle size={18} />

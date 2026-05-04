@@ -104,20 +104,28 @@ export function Pricing() {
               {/* CTA */}
               <div className="mt-10 flex flex-col gap-3">
                 <a
-                  href={SITE.whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={SITE.contactUrl}
+                  target={SITE.hasWhatsApp ? "_blank" : undefined}
+                  rel={SITE.hasWhatsApp ? "noopener noreferrer" : undefined}
                   className="group w-full inline-flex items-center justify-center gap-2 rounded-full bg-blue hover:bg-blue-hover active:bg-blue-active text-white text-[16px] font-semibold py-4 shadow-blue transition-all duration-200"
                 >
-                  Comprar ahora por WhatsApp
+                  {SITE.contactCtaLabel}
                   <ArrowRight size={18} className="transition-transform group-hover:translate-x-0.5" />
                 </a>
                 <a
                   href="#demo"
                   className="w-full text-center text-[14px] font-medium text-ink-soft hover:text-ink py-2 transition-colors"
                 >
-                  Antes de comprar, ver demo en video →
+                  Antes de comprar, prueba el demo en vivo →
                 </a>
+              </div>
+
+              {/* Garantía */}
+              <div className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-success/10 border border-success/20 px-4 py-3">
+                <Shield size={16} className="text-success flex-shrink-0" strokeWidth={2.5} />
+                <span className="text-[13px] font-semibold text-success">
+                  {PRICING.guarantee}
+                </span>
               </div>
 
               {/* Trust line */}
@@ -151,9 +159,9 @@ export function Pricing() {
         >
           ¿Más de 5 sucursales o cadena?{" "}
           <a
-            href={SITE.whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={SITE.contactUrl}
+            target={SITE.hasWhatsApp ? "_blank" : undefined}
+            rel={SITE.hasWhatsApp ? "noopener noreferrer" : undefined}
             className="text-blue font-semibold hover:underline"
           >
             Contacta para plan empresa →

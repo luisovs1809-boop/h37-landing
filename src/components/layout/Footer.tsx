@@ -18,7 +18,7 @@ const cols = [
     links: [
       { label: "Acerca de Grupo H37", href: "https://grupoh37.tech", external: true },
       { label: "Contacto", href: `mailto:${SITE.email}` },
-      { label: "WhatsApp", href: SITE.whatsappUrl, external: true },
+      ...(SITE.hasWhatsApp ? [{ label: "WhatsApp", href: SITE.whatsappUrl, external: true as const }] : []),
     ],
   },
   {

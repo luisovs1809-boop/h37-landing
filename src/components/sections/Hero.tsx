@@ -107,7 +107,8 @@ export function Hero() {
           <div className="absolute -inset-x-8 -top-8 -bottom-12 -z-10 rounded-[3rem] bg-gradient-to-b from-blue/5 to-transparent blur-3xl" />
 
           <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-10 lg:gap-12 items-center">
-            <BrowserMockup className="order-2 lg:order-1" />
+            {/* En mobile el browser mockup queda apretado: lo ocultamos y dejamos solo el phone */}
+            <BrowserMockup className="hidden md:block order-2 lg:order-1" />
             <PhoneMockup className="order-1 lg:order-2" />
           </div>
         </motion.div>
